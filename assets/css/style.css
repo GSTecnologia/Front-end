@@ -1,0 +1,791 @@
+body {
+  background: #fff;
+  color: #666666;
+  font-family: "Arial", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* Prelaoder */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #f2f2f2;
+  border-top: 6px solid #3399FF;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  padding: 30px 0;
+  height: 92px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+#header.header-scrolled {
+  background: rgba(0, 0, 0, 0.527);
+  padding: 20px 0;
+  height: 72px;
+  transition: all 0.5s;
+}
+
+#header #logo {
+  float: left;
+}
+
+#header #logo h1 {
+  font-size: 34px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: #fff;
+  padding-left: 10px;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+}
+
+/*-------
+# Intro 
+-------*/
+#intro {
+  width: 100%;
+  background: #fff;
+}
+
+.bg {
+  background: url("/assets/img/bg01.png") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+#intro .bg::before {
+  content: '';
+  background-color: rgba(23, 160, 214, 0.527);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#intro .btn-danger {
+  background-color:#CD2F27;
+  border-color:#CD2F27;
+  margin: 0px 0px 50px 70px;
+}
+
+#intro .btn-primary {
+  background-color:#3B5998;
+  border-color:#3B5998;
+  margin: 0px 0px 50px 10px;
+}
+
+
+#intro p {
+  color: #fff;
+  font-size:20px;
+  font-family: "Arial", sans-serif;
+}
+
+
+/* Nav Menu */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu */
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu */
+#nav-menu-container {
+  float: right;
+  margin: 0;
+}
+
+/* Nav Meu */
+.nav-menu a {
+  padding: 0 8px 10px 8px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  text-transform: uppercase;
+  outline: none;
+}
+.nav-menu > .menu-active > a {
+  color: #FFE91A;
+}
+
+.nav-menu li:hover > a{
+  color: #FFE91A;
+}
+
+.nav-menu > li {
+  margin-left: 10px;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 0;
+  padding: 10px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: #fff;
+}
+
+.nav-menu ul li {
+  transition: 0.3s;
+}
+
+.nav-menu ul li a {
+  padding: 10px;
+  color: #333;
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+}
+
+.nav-menu ul li:hover > a {
+  color: #00598C;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+  color: #fff;
+}
+
+
+
+/* Mobile Nav */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.8);
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+  font-weight: 700;
+  font-family: "Arial", sans-serif;
+}
+
+#mobile-nav ul li a:hover {
+  color: #00598C;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul li.menu-active a {
+  color: #00598C;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #00598C;
+}
+
+#mobile-nav ul .menu-has-children li a {
+  text-transform: none;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #00598C;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+/* Mobile Nav */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+/*---------- 
+Como Funciona 
+-----------*/
+
+#como-funciona {
+  background: #fff;
+  background-size: cover;
+  padding: 30px 0 40px 0;
+  position: relative;
+}
+
+.titulo-como-funciona h3 {
+  font-size: 24px;
+  color: #0F6292;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.titulo-como-funciona h3::before {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.titulo-como-funciona h3::after {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #00598C;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+#como-funciona .como-funciona-col {
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  height: 390px;
+}
+
+#como-funciona .como-funciona-col .img {
+  position: relative;
+}
+
+#como-funciona .como-funciona-col .img img {
+  border-radius: 4px 4px 0 0;
+}
+
+#como-funciona .como-funciona-col h2 {
+  color: #00598C;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 20px;
+  margin: 20px 0 20px 0;
+}
+
+#como-funciona .como-funciona-col p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #333;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+/*------------
+Para quem gosta de decoração
+------------*/
+#gosta-de-decoracao {
+  background: #EEEEEE;
+  background-size: cover;
+  padding: 0px 0 80px 0;
+  position: relative;
+}
+
+.titulo-gosta-de-decoracao h3 {
+  font-size: 24px;
+  color: #666666;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+}
+
+.titulo-gosta-de-decoracao h3::before {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  left: calc(50% - 60px);
+}
+
+.titulo-gosta-de-decoracao h3::after {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #666666;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+#gosta-de-decoracao .container {
+  position: relative;
+  z-index: 10;
+}
+
+#gosta-de-decoracao .gosta-de-decoracao-col .img {
+  position: relative;
+  padding: 20px 0px 0px 10px;
+
+}
+
+/*------------
+Para Profissonais
+------------*/
+#para-profissionais {
+  background: #fff;
+}
+
+#para-profissionais .para-profissionais-col h2 {
+  color: #666666;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+#para-profissionais .para-profissionais-col p {
+  font-size: 16px;
+  color: #333;
+}
+
+#para-profissionais .para-profissionais-col .exercitation  {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00598C;
+}
+
+#para-profissionais .para-profissionais-col2 h2 {
+  color: #666666;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+#para-profissionais .para-profissionais-col2 p {
+  font-size: 16px;
+  color: #333;
+}
+
+#para-profissionais .para-profissionais-col2 .exercitation2  {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00598C;
+}
+
+
+/* Tenho Interesse
+--------------------------------*/
+#tenho-interesse .container {
+  text-align: left;
+}
+
+#tenho-interesse {
+  padding: 60px 0;
+  background: #004466;
+}
+
+#tenho-interesse .text1 {
+  color: #fff;
+  font-family: arial,sans-serif;
+  font-size: 28px;
+  text-align: center;
+  padding:0;
+}
+
+#tenho-interesse .text2 {
+  color: #fff;
+  font-family: arial,sans-serif;
+  font-size: 22px;
+  text-align: center;
+  padding:0;
+}
+
+#tenho-interesse .btn-tenho-interesse {
+  background: #CD2F27;
+  border: 0;
+  padding: 10px 60px;
+  color: #fff;
+  font-family: arial,sans-serif;
+  font-size: 20px;
+  transition: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#btn {
+  padding: 50px;
+  text-align: center;
+}
+
+#tenho-interesse .btn-tenho-interesse:hover {
+  color: #CD2F27;
+  background: #fff;
+}
+
+#tenho-interesse .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#tenho-interesse .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+form {
+  padding: 20px;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  margin: 0 0 0px;
+  color: #fff;
+  font-family: arial,sans-serif;
+}
+
+.input-padrao {
+  display: inline;
+  margin: 0;
+  padding-top:  0px;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+.enviar {
+  padding: 5px 110px;
+  background: #CD2F27;
+  color: white;
+  font-size:20px;
+  border:none;
+}
+
+.enviar:hover {
+  background:#fff;
+  color: #CD2F27;
+}
+
+/*--------
+Rodapé
+--------*/
+
+#rodape {
+  background-color: #EEEEEE;
+}
+
+#rodape p {
+  font-size:14px;
+  font-family: "Arial", sans-serif;
+  font-weight:300px;
+  color: #000;
+  padding:10px;
+}
+
+/* breakpoint */
+@media (min-width: 350px) {
+  #intro p {
+    color: #fff;
+    font-size: 16px;
+    padding: 80px 0px 0px 30px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .titulo-gosta-de-decoracao h3 {
+    font-size: 24px;
+    color: #666666;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding: 30px 0px 0px 0px;
+  }
+  #gosta-de-decoracao .gosta-de-decoracao-col .img {
+    position: relative;
+    padding: 20px 0px 0px 50px;
+  
+  }
+
+  #para-profissionais col{
+    padding:0px;
+  }
+ 
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+    display: none;
+  }
+  #mobile-nav-toggle {
+    display: inline;
+  }
+  #header #logo h1 {
+    font-size: 28px;
+  }
+  #header #logo img {
+    max-height: 40px;
+  }
+  #intro h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 992px) {
+  #testimonials .testimonial-item p {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  #nav-menu-container {
+    padding-right: 60px;
+  }
+  #nav-menu-container a {
+    font-size: 12px;
+  }
+  #header #logo {
+    padding-left: 60px;
+  }
+  #intro p {
+    color: #fff;
+    font-size: 22px;
+    padding: 120px 230px 0px 70px;
+    font-weight: 300;
+    text-align: left;
+  }
+  #como-funciona {
+    background: #fff;
+    background-size: cover;
+    padding: 55px;
+    position: relative;
+  }
+  #como-funciona a {
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+  }
+  #como-funciona p {
+    font-size: 15px;
+    font-family: "Arial", sans-serif;
+  }
+  #gosta-de-decoracao {
+    background: #EEEEEE;
+    background-size: cover;
+    padding: 0px 0 90px 0;
+    position: relative;
+  }
+  .titulo-gosta-de-decoracao h3 {
+    font-size: 24px;
+    color: #666666;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding: 55px;
+  }
+  #gosta-de-decoracao .gosta-de-decoracao-col .img {
+    position: relative;
+    padding: 30px 0px 0px 10px;
+  }
+  
+}
+
